@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    private:
+    
+        int RollNo;
+        string name;
+        char grade;
+        float percentage;
+    public:
+    void setRollNo(int a)
+    {
+        RollNo=a;
+    }
+    void rollNo()
+    {
+        cout<<"ROLL NUMBER OF THE STUDENT IS ::"<<RollNo<<endl;
+    }
+
+    void setName(string a)
+    {
+        name=a;
+    }
+    void showname()
+    {
+        cout<<"STUDENT NAME::"<<name<<endl;
+    }
+    void setgrade(char a)
+    {
+        grade=a;
+    }
+    void showgrade()
+    {
+        cout<<"YOUR GRADE IS ::"<<grade<<endl;
+    }
+    void setper(float a)
+    {
+        percentage=a;
+    }
+    void showper()
+    {
+        cout<<"YOUR PERCENTAGE IS ::"<<percentage<<endl;
+    }
+};
+int main()
+{
+    student n;
+    n.setRollNo(47);
+    n.rollNo();
+    n.setName("HUSNAIN KHAN");
+    n.showname();
+    n.setgrade('A');
+    n.showgrade();
+    n.setper(77.79);
+    n.showper();
+
+
+    return 0;
+}
