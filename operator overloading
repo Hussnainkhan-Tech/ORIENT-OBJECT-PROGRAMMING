@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+class Number {
+private:
+    int value;
+public:
+    Number(int v = 0) {   // constructor
+        value = v;
+    }
+
+    // Post-increment (n1++)
+    Number operator++(int) {
+        Number temp = *this;  // purani value store kar li
+        value = value + 1;    // object ki value +1
+        return temp;          // purana object return
+    }
+
+    void show() {
+        cout << "Value = " << value << endl;
+    }
+};
+
+int main() {
+    Number n1(5);
+
+    n1.show();   // Value = 5
+
+    n1++;        // post-increment call
+    n1.show();   // Value = 6
+
+    n1++;        // fir se call
+    n1.show();   // Value = 7
+
+    return 0;
+}
+
+
+
+1. Overloading kya hota hai?
+
+Normally ++ sirf integer ya float numbers par lagta hai.
+Lekin agar hum apni class banayen (jaise Number), aur uska ek object banayein (n1), to directly n1++ likhne se error aayega.
+👉 Is problem ko solve karne ke liye hum operator overloading karte hain.
