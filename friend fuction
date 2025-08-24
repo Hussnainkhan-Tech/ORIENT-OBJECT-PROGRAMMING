@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class Number {
+private:
+    int value;
+public:
+    Number(int v) {
+        value = v;
+    }
+
+    // Friend function declaration
+    friend void showValue(Number n);
+};
+
+// Friend function definition (class ke bahar)
+void showValue(Number n) {
+    cout << "Value = " << n.value << endl;  
+    // yahan private 'value' ko access kar rahe hain
+}
+
+int main() {
+    Number n1(10);
+
+    showValue(n1);  // friend function call
+
+    return 0;
+}
